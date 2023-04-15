@@ -1,0 +1,78 @@
+:root {
+  /* Color variables */
+  --white: #fff;
+  --black: #000;
+  --off-black: #011110;
+  --off-white: #f5f5f5;
+
+  /* Body variables */
+  --body-font-family: Arial, sans-serif;
+  --body-font-size: 1.2rem;
+
+  --body-background: var(--body-background-light);
+  --body-background-light: var(--off-white);
+  --body-background-dark: var(--off-black);
+
+  --body-color: var(--body-color-light);
+  --body-color-light: var(--off-black);
+  --body-color-dark: var(--off-white);
+
+  /* Navbar variables */
+  --nav-font-size: 1.2rem;
+
+  --nav-background: var(--nav-background-light);
+  --nav-background-light: var(--white);
+  --nav-background-dark: var(--black);
+
+  --nav-color: var(--nav-color-light);
+  --nav-color-light: var(--black);
+  --nav-color-dark: var(--white);
+
+  /* Footer variables */
+  --footer-font-size: 1.2rem;
+
+  --footer-background: var(--footer-background-light);
+  --footer-background-light: var(--white);
+  --footer-background-dark: var(--black);
+
+  --footer-color: var(--footer-color-light);
+  --footer-color-light: var(--black);
+  --footer-color-dark: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: var(--body-background-dark);
+    --body-color: var(--body-color-dark);
+
+    --nav-background: var(--nav-background-dark);
+    --nav-color: var(--nav-color-dark);
+
+    --footer-background: var(--footer-background-dark);
+    --footer-color: var(--footer-color-dark);
+  }
+}
+
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  background: var(--body-background);
+  color: var(--body-color);
+}
+
+/* Mobile-first styles */
+.nav-container {
+  background: var(--nav-background);
+  font-size: var(--nav-font-size);
+}
+
+.footer-container {
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: var(--footer-font-size);
+  background: var(--footer-background);
+  text-align: center;
+}
